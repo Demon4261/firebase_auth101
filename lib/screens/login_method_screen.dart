@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/my_button.dart';
 
 class LoginMethod extends StatefulWidget {
-  LoginMethod({Key? key}) : super(key: key);
+  const LoginMethod({Key? key}) : super(key: key);
 
   @override
   State<LoginMethod> createState() => _LoginMethodState();

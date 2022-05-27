@@ -1,5 +1,6 @@
 import 'package:firebase_auth101/screens/login_method_screen.dart';
-import 'package:firebase_auth101/widgets/my_button.dart';
+import 'package:firebase_auth101/screens/login_screen.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginMethod(),
+      home: LoginScreen(),
     );
   }
 }

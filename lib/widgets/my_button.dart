@@ -13,7 +13,7 @@ class MyButtons extends StatelessWidget {
         height: 50,
         width: 300,
         decoration: BoxDecoration(
-            color: Colors.blue, borderRadius: BorderRadius.circular(12)),
+            color: Colors.blue, borderRadius: BorderRadius.circular(30)),
         child: Center(
             child: Text(
           inputText,
