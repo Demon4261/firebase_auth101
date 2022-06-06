@@ -1,27 +1,36 @@
 import 'package:flutter/material.dart';
 
-class MyTextField extends StatelessWidget {
-  String labelText;
-  String hintText;
-  MyTextField({Key? key, required this.labelText, required this.hintText})
-      : super(key: key);
+class CustomTextField extends StatelessWidget {
+  final TextEditingController controller;
+  final String hintText;
+
+  const CustomTextField({
+    Key? key,
+    required this.controller,
+    required this.hintText,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      child: TextField(
-        decoration: InputDecoration(
-            labelText: labelText,
-            labelStyle: TextStyle(),
-            hintText: hintText,
-            enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.blue),
-                borderRadius: BorderRadius.all(Radius.circular(30))),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(30)),
-              borderSide: BorderSide(color: Colors.green),
-            )),
+    return TextField(
+      controller: controller,
+      style: const TextStyle(color: Colors.black),
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: const BorderSide(color: Colors.transparent, width: 0),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: const BorderSide(color: Colors.transparent, width: 0),
+        ),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        filled: true,
+        fillColor: const Color(0xffF5F6FA),
+        hintText: hintText,
+        hintStyle: const TextStyle(
+            fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black),
       ),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:firebase_auth101/firebase_options.dart';
 import 'package:firebase_auth101/screens/login_method_screen.dart';
 import 'package:firebase_auth101/screens/login_screen.dart';
+import 'package:firebase_auth101/screens/sign_up_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'package:flutter/material.dart';
@@ -22,10 +23,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: LoginScreen(),
+      theme: ThemeData.dark(),
+      home: LoginMethod(),
     );
   }
 }

@@ -1,3 +1,5 @@
+import 'package:firebase_auth101/screens/login_screen.dart';
+import 'package:firebase_auth101/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/my_button.dart';
@@ -23,29 +25,52 @@ class _LoginMethodState extends State<LoginMethod> {
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Center(
               child: Column(
-            children: const [
-              SizedBox(
+            children: [
+              const SizedBox(
                 height: 20,
               ),
-              MyButtons(
-                inputText: "Login Screen",
+              CustomButton(
+                text: "Email Sign up",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignupScreen()),
+                  );
+                },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              MyButtons(inputText: "Signup Screen"),
-              SizedBox(
+              CustomButton(
+                text: "Email login",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  );
+                },
+              ),
+              const SizedBox(
                 height: 20,
               ),
-              MyButtons(inputText: "Mobile"),
-              SizedBox(
+              CustomButton(
+                text: "Phone Sign up",
+                onTap: () {},
+              ),
+              const SizedBox(
                 height: 20,
               ),
-              MyButtons(inputText: "Gmail Login"),
-              SizedBox(
+              CustomButton(
+                text: "fb Sign up",
+                onTap: () {},
+              ),
+              const SizedBox(
                 height: 20,
               ),
-              MyButtons(inputText: "Fb Login")
+              CustomButton(
+                text: "google sign Up",
+                onTap: () {},
+              )
             ],
           )),
         ),
